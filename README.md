@@ -62,7 +62,11 @@ Username : MedToumi
 
 Password : 123456789
 
-### Reporting
+### Running Tests and Reporting
+Run test with jenkins and execute the following command : mvn clean test
+
+<img width="1337" height="495" alt="runjenkins" src="https://github.com/user-attachments/assets/e2ffe689-d022-48de-b4b4-5200e293d507" />
+
 The Extent Reports generated from the Selenium TestNG tests are located under target/surefire-reports/emailable-report.html.html.
 
 <img width="1342" height="422" alt="testngreport" src="https://github.com/user-attachments/assets/4ad70692-8863-4764-bed4-5fed45efa646" />
