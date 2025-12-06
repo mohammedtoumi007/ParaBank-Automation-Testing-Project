@@ -33,24 +33,35 @@ Link Demo : https://parabank.parasoft.com/parabank/index.htm
 
 This repository includes test data for registration testing using data-driven techniques.
 
-File Details
+### File Details
 
 File Name: DataRegister.csv
 Purpose: Contains registration data for automated tests.
 
-Data Format
+### Data Format
 
 Each line in DataRegister.csv follows the format: 
+
 First Name : Mohamed
+
 Last Name : Away Toumi
+
 Address : manzel chaker
+
 City : Tunisia
+
 State : Sfax
+
 ZipCode : 3076
+
 Tel : 25378710
+
 SSN : 123
+
 Username : MedToumi
+
 Password : 123456789
 
-Reporting
+### Reporting
+
 The Extent Reports generated from the Selenium TestNG tests are located under target/surefire-reports/emailable-report.html.html.
