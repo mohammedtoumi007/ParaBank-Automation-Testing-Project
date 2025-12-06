@@ -1,0 +1,22 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class TransferFundsPage {
+	WebDriver driver;
+	WebDriverWait wait;
+	
+	//Locators
+	private final By TransferFundLink = By.partialLinkText("Accounts Overview");
+	private final By TransferAmount = By.id("amount");
+	private final By FromAccount = By.xpath("//*[@id=\"fromAccountId\"]/option");
+	private final By ToAccount = By.xpath("//*[@id=\"toAccountId\"]/option");
+	private final By TransferButton = By.xpath("//input[@value='Transfer']");
+	private final By TransferMessage = By.xpath("//h1[normalize-space()='Transfer Complete!']");
+	
+	
+	
+
+}

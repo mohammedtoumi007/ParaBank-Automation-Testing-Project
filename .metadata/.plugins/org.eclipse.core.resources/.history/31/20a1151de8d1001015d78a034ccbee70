@@ -1,0 +1,21 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import base.BaseTest;
+
+public class RegisterPage extends BaseTest{
+	public RegisterPage(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	//Locators
+	private final By FirstName = By.id("customer.firstName");
+	private final By LastName = By.id("customer.lastName");
+	private final By Address = By.id("customer.address.street");
+	private final By City = By.id("customer.address.city");
+	private final By State = By.id("customer.address.state");
+	
+
+}

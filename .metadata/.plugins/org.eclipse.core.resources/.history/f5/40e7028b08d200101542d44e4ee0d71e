@@ -1,0 +1,53 @@
+package test;
+
+import java.io.IOException;
+
+import org.json.simple.parser.ParseException;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import base.BaseTest;
+import data.ReadDataUser;
+import pages.HomePage;
+import pages.LogOutPage;
+import pages.RegisterPage;
+
+public class RegisterTest extends BaseTest {
+	HomePage homePage ;
+    RegisterPage registerPage ;
+
+    LogOutPage logOutPage ;
+    ReadDataUser readDataUser;
+    
+    @DataProvider(name = "jsonData")
+    public Object[] testDataForRegister() throws IOException, ParseException {
+        readDataUser = new readDataUser();
+        return readDataUser.testDataForSuccessfulRegister();
+    }
+    @Test(priority = 1)
+    public void goToResgisterPage()
+    {
+        homePage = new HomePage(driver);
+        homePage.goToRegisterPage();
+    }
+    
+
+    @Test( dataProvider = "jsonData", priority = 2,dependsOnMethods = "goToResgisterPage")
+    public void validRegister(String data){
+        String[] users = data.split(",");
+        registerPage = new RegisterPage(driver );
+        Assert.assertEquals("Signing up is easy!",registerPage.assertTitleReg().getText());
+        registerPage.fillRegisterForm(users[0],users[1],users[2],users[3],users[4],users[5],users[6],users[6],users[7],users[8]);
+        Assert.assertTrue(registerPage.assertOnWelcome().getText().contains("Welcome "+users[7]));
+
+    }
+    
+    @Test(priority = 3,dependsOnMethods = "validRegister")
+    public void logOut()
+    {
+        logOutPage = new LogOutPage();
+        logOutPage.goToLogOut();
+        Assert.assertEquals("https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC",driver.getCurrentUrl());
+    }
+
+}

@@ -1,0 +1,15 @@
+package tests;
+
+import org.testng.annotations.Test;
+
+import pages.RegisterPage;
+import utils.UserData;
+
+public class RegisterPageTest extends BaseTest {
+	@Test(dataProvider = "csvData", dataProviderClass = UserData.class, description = "Test Case - Automate User Registration process")
+    public void registerTest(String firstName, String lastName, String address, String city, String state, String zipCode, String phone, String ssn, String username, String password) {
+        System.out.println("Registering user with username: " + username);
+        new RegisterPage(driver).registerUser(firstName, lastName, address, city, state, zipCode, phone, ssn, username, password);
+    }
+
+}

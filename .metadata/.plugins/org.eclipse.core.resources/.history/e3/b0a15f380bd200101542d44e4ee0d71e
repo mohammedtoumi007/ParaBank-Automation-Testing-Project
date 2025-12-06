@@ -1,0 +1,52 @@
+package pages;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+public class RegisterPage{
+	WebDriver driver;
+	WebDriverWait wait;
+	
+	public RegisterPage(WebDriver driver) {
+		this.driver = driver;
+		wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	}
+	
+	//Locators
+	private final By registerLink = By.partialLinkText("Register");
+	private final By FirstName = By.id("customer.firstName");
+	private final By LastName = By.id("customer.lastName");
+	private final By Address = By.id("customer.address.street");
+	private final By City = By.id("customer.address.city");
+	private final By State = By.id("customer.address.state");
+	private final By ZipCode = By.id("customer.address.zipCode");
+	private final By Phone = By.id("customer.phoneNumber");
+	private final By SSN = By.id("customer.ssn");
+	private final By Username = By.id("customer.username");
+	private final By Password = By.id("customer.password");
+	private final By ConfirmPassword = By.id("repeatedPassword");
+	private final By RegisterButton = By.xpath("//input[@value='Register']");
+	
+	public void fillRegisterForm(String Fname , String Lname , String add , String cit , String stat ,String zip , String pho ,String sn ,String UN , String Pass) {
+		EntrText(driver.findElement(FirstName), Fname);
+		EnterTxt(driver.findElement(LastName), Lname);
+	    EnterTxt(driver.findElement(Address), add);
+	    EnterTxt(driver.findElement(City), cit);
+	    EnterTxt(driver.findElement(State), stat);
+	    EnterTxt(driver.findElement(ZipCode), zip);
+	    EnterTxt(driver.findElement(Phone), pho);
+	    EnterTxt(driver.findElement(SSN), sn);
+	    EnterTxt(driver.findElement(Username), UN);
+	    EnterTxt(driver.findElement(Password), Pass);
+	    EnterTxt(driver.findElement(ConfirmPassword),Pass );
+	    clickEle(driver.findElement(RegisterButton));
+		
+	}
+	
+
+}

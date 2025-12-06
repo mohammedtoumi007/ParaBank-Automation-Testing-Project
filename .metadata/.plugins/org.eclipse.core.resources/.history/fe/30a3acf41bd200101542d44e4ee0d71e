@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <!-- Define suite level parameters -->
+    <parameter name="dynamicUsername" value="${utils.UserData.getDynamicUsername()}" />
+    <classes>
+      <class name="tests.RegisterPageTest"/>
+      <class name="tests.LogInPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

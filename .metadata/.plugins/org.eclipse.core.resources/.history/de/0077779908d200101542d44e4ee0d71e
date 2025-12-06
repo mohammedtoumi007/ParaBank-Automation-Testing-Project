@@ -1,0 +1,16 @@
+{
+  "successfulRegister": [
+    {
+      "firstName": "Mohamed",
+      "lastName": "Away Toumi",
+      "address": "Manzel chaker",
+      "city": "Tunisia",
+      "state": "Sfax",
+      "zipcode": "3076",
+      "phone": "25378710",
+      "ssn": "13",
+      "userName": "MedToumi",
+      "password": "123456"
+    }
+  ]
+}
