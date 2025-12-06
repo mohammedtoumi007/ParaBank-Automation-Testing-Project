@@ -53,30 +53,6 @@ This repository includes test data for registration testing using data-driven te
 File Name: DataRegister.csv
 Purpose: Contains registration data for automated tests.
 
-### Data Format
-
-Each line in DataRegister.csv follows the format: 
-
-First Name : Mohamed
-
-Last Name : Away Toumi
-
-Address : manzel chaker
-
-City : Tunisia
-
-State : Sfax
-
-ZipCode : 3076
-
-Tel : 25378710
-
-SSN : 123
-
-Username : MedToumi
-
-Password : 123456789
-
 ### Running Tests and Reporting
 Run test with jenkins and execute the following command : mvn clean test
 
