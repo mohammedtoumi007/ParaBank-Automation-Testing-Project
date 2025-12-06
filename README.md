@@ -5,6 +5,21 @@ Welcome to the Parabank Automation project! This repository contains automated t
 
 Link Demo : https://parabank.parasoft.com/parabank/index.htm
 
+## Tools and technology
+● Programming Language: Java(selenium)
+
+● Testing Framework: TestNG*
+
+● Build automation: Maven
+
+● Design Pattern : (POM) Page Object Model
+
+● Read Test data : DataRegister.csv file
+
+● Reports: allure-report
+
+● CMD: MVN command
+
 ## Covered Test cases
 
 ●  Automate User Registration process
