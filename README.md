@@ -63,5 +63,10 @@ Username : MedToumi
 Password : 123456789
 
 ### Reporting
-
 The Extent Reports generated from the Selenium TestNG tests are located under target/surefire-reports/emailable-report.html.html.
+
+<img width="1342" height="422" alt="testngreport" src="https://github.com/user-attachments/assets/4ad70692-8863-4764-bed4-5fed45efa646" />
+
+All test executions generate Allure Reports, which provide a clear and interactive view of test results.
+
+<img width="1342" height="499" alt="allureReport" src="https://github.com/user-attachments/assets/26742043-fcaf-4823-ac9d-317d7d3268f3" />
