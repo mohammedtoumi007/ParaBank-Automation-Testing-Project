@@ -8,7 +8,7 @@ Link Demo : https://parabank.parasoft.com/parabank/index.htm
 ## Tools and technology
 ● Programming Language: Java(selenium)
 
-● Testing Framework: TestNG*
+● Testing Framework: TestNG
 
 ● Build automation: Maven
 
